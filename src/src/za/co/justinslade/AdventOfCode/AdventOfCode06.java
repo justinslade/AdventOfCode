@@ -1,14 +1,15 @@
 package za.co.justinslade.AdventOfCode;
 
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import javax.xml.bind.DatatypeConverter;
+import java.io.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.TreeMap;
 
-public class AdventOfCode6Part2 {
+public class AdventOfCode06 {
 
     public static void main(String... args) throws IOException {
 
@@ -42,7 +43,7 @@ public class AdventOfCode6Part2 {
             while (iterator1.hasNext()) {
                 String next = iterator1.next();
                 Integer integer = stringIntegerTreeMap.get(next);
-                if (integer < frequency || frequency == 0) {
+                if (integer > frequency) {
                     frequency = integer;
                     letter = next;
                 }

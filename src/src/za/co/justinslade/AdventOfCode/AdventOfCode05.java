@@ -5,7 +5,7 @@ import javax.xml.bind.DatatypeConverter;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class AdventOfCode5 {
+public class AdventOfCode05 {
 
     public static void main(String... args) throws NoSuchAlgorithmException {
         String input = "reyedfim";
@@ -14,7 +14,7 @@ public class AdventOfCode5 {
         while (password.length() < 8){
             String format = String.format("%s%d", input, i);
             System.out.println(format);
-            String md5Hash = AdventOfCode5.getMD5Hash(format);
+            String md5Hash = AdventOfCode05.getMD5Hash(format);
             System.out.println(md5Hash);
             if (md5Hash.startsWith("00000")){
                 char c = md5Hash.charAt(5);
