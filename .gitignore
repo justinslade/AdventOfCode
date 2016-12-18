@@ -1,2 +1,4 @@
 src/.idea/*
 src/src.iml
+.idea/
+src/out/
