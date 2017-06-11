@@ -19,10 +19,10 @@ public class AdventOfCode01 {
         BufferedReader buffer = new BufferedReader(new FileReader(file));
         String line;
         while ((line = buffer.readLine()) != null) {
+            line = line.trim();
             int direction = NORTH;
             int currentX = 0;
             int currentY = 0;
-            line = line.trim();
             String[] split = line.split(", ");
             for (int i = 0; i < split.length; i++) {
                 String turn = split[i].substring(0,1);
